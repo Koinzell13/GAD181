@@ -7,7 +7,12 @@ public class NPC_Controller : MonoBehaviour
     public float speed;
     public float difficulty;
     public GameObject Slave_1;
+    public GameObject Slave_2;
+    public GameObject Slave_3;
+    public GameObject Slave_4;
+    public GameObject Slave_5;
     public bool hittable = false;
+
 
     // Start is called before the first frame update
     void Start()
@@ -35,5 +40,18 @@ public class NPC_Controller : MonoBehaviour
     public void Reset()
     {
         Slave_1.SetActive(false);
+    }
+
+    public void Second()
+    {
+        Slave_2.SetActive(true);
+    }
+
+    void Turn2()
+    {
+        if (Slave_2.activeSelf)
+        {
+            Slave_2.transform.Translate(-1 * speed, 0, 0);
+        }
     }
 }

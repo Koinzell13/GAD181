@@ -41,5 +41,12 @@ public class GameController : MonoBehaviour
             failure.SetActive(true);
         }
         NPCController.GetComponent<NPC_Controller>().Reset();
+
+        HitAgain();
+    }
+
+    public void HitAgain()
+    {
+        weapon.SetActive(false);
     }
 }
