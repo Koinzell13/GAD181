@@ -52,7 +52,7 @@ public class NPC_Controller : MonoBehaviour
     {
         if (Slave_2.activeSelf)
         {
-            Slave_2.transform.Translate(-1 * speed, 0, 0);
+            Slave_2.transform.Translate(1 * speed, 0, 0);
         }
     }
 
@@ -60,5 +60,11 @@ public class NPC_Controller : MonoBehaviour
     {
         Debug.Log("don't hit me");
         hittable = true;
+    }
+
+    public void Reset2()
+    {
+        Slave_2.SetActive(false);
+        hittable = false;
     }
 }
