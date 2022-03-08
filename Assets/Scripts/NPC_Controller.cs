@@ -33,18 +33,19 @@ public class NPC_Controller : MonoBehaviour
     {
         Debug.Log("don't hit me");
         hittable = true;
-        Reset();
-
     }
 
     public void Reset()
     {
         Slave_1.SetActive(false);
+        hittable = false;
+        Second();
     }
 
     public void Second()
     {
         Slave_2.SetActive(true);
+        Turn2();
     }
 
     void Turn2()
@@ -53,5 +54,11 @@ public class NPC_Controller : MonoBehaviour
         {
             Slave_2.transform.Translate(-1 * speed, 0, 0);
         }
+    }
+
+    public void readyToHit2()
+    {
+        Debug.Log("don't hit me");
+        hittable = true;
     }
 }

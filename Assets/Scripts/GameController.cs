@@ -10,6 +10,7 @@ public class GameController : MonoBehaviour
     public bool goodHit = false;
     public GameObject success;
     public GameObject failure;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -35,6 +36,7 @@ public class GameController : MonoBehaviour
         {
             Debug.Log("Good timing");
             success.SetActive(true);
+
         } else
         {
             Debug.Log("Bad timing");
@@ -47,6 +49,7 @@ public class GameController : MonoBehaviour
 
     public void HitAgain()
     {
+        
         weapon.SetActive(false);
     }
 }
