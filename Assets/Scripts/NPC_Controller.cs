@@ -27,6 +27,9 @@ public class NPC_Controller : MonoBehaviour
         {
             Slave_1.transform.Translate(-1 * speed, 0, 0);
         }
+        Second();
+        Turn2();
+
     }
 
     public void readyToHit()
@@ -39,20 +42,22 @@ public class NPC_Controller : MonoBehaviour
     {
         Slave_1.SetActive(false);
         hittable = false;
-        Second();
+        
     }
 
     public void Second()
     {
-        Slave_2.SetActive(true);
-        Turn2();
+        if (!Slave_1.activeSelf)
+        {
+            Slave_2.SetActive(true);
+        }
     }
 
     void Turn2()
     {
         if (Slave_2.activeSelf)
         {
-            Slave_2.transform.Translate(1 * speed, 0, 0);
+            Slave_2.transform.Translate(-1 * speed, 0, 0);
         }
     }
 
@@ -66,5 +71,6 @@ public class NPC_Controller : MonoBehaviour
     {
         Slave_2.SetActive(false);
         hittable = false;
+
     }
 }

@@ -41,6 +41,7 @@ public class GameController : MonoBehaviour
         {
             Debug.Log("Bad timing");
             failure.SetActive(true);
+            
         }
         NPCController.GetComponent<NPC_Controller>().Reset();
 
@@ -51,5 +52,25 @@ public class GameController : MonoBehaviour
     {
         
         weapon.SetActive(false);
+    }
+
+    public void Strike2()
+    {
+
+        if (goodHit)
+        {
+            Debug.Log("Good timing");
+            success.SetActive(true);
+
+        }
+        else
+        {
+            Debug.Log("Bad timing");
+            failure.SetActive(true);
+
+        }
+        NPCController.GetComponent<NPC_Controller>().Reset();
+
+        HitAgain();
     }
 }

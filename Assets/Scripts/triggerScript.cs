@@ -12,20 +12,20 @@ public class triggerScript : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     private void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log("TRIGGGGER");
         GameController.GetComponent<GameController>().goodHit = true;
+        
     }
 
     private void OnTriggerLeave2D(Collider2D other)
     {
         GameController.GetComponent<GameController>().goodHit = false;
+    }
+
+    void Update()
+    {
+        
     }
 }
